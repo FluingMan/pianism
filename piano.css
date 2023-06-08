@@ -1,0 +1,56 @@
+body {
+    background-color: #51868C;
+    font-family: "Helvetica", sans-serif;
+}
+
+header {
+    background-image: url("piano-image.jpg");
+    background-size: 50% auto; /* 幅を100%に調整 */
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 70px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+section {
+    color: #FFFFFF;
+    padding: 20px;
+
+}
+
+#greeting {
+    background-color: #51868C;
+    background-size: cover;
+}
+
+#lessons {
+    background-color: #51868C;
+}
+
+#contact {
+    background-color: #51868C;
+}
+#lessons h2,
+#contact h2 {
+    font-family: "Arial", sans-serif;
+}
+
+#greeting p,
+#lessons p,
+#contact p {
+    font-family: "Times New Roman", serif;
+}
