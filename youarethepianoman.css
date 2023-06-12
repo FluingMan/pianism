@@ -20,12 +20,8 @@ header {
     margin:0;
     text-align: left;
     padding-left: 10px; /* メニュー欄との間隔を調整 */
-}
+    padding-right: 10px; /* 線とテキストの間の余白 */
 
-@media (max-width: 768px) {
-  .menu {
-    width: 50%; /* メニュー欄の幅を調整 */
-  }
 }
 
 .menu {
