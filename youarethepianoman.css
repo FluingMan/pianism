@@ -25,17 +25,18 @@ header {
 }
 
 .menu {
+  font-size: 8px;
   position: fixed;
   top: 0;
   left: 0;
-  width: 200px;
   background-color: #51868C;
   padding: 20px;
   color:#ffffff;
   border-right: 1px solid #ccc; /* メニュー欄とボディの欄を分ける線を追加 */
   height: 100%; /* メニュー欄の高さを100%に設定 */
-  width: 144px; /* メニュー欄の幅を調整 */
+  width: 112px; /* メニュー欄の幅を調整 */
   margin-left: 0px; /* メニュー欄の左側の余白を設定 */
+  padding-right: 0px; /* 線とテキストの間の余白 */
 
 }
 
