@@ -36,7 +36,8 @@ header {
   margin-left:0px; /* メニュー欄の左側の余白を設定 */
   padding-right: 0px; /* 線とテキストの間の余白 */
   box-sizing: border-box; /* ボーダーボックスを考慮したボックスモデル */
-
+}
+  
 .menu ul {
   list-style-type: none;
   padding: 0;
