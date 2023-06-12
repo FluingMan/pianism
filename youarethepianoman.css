@@ -22,7 +22,10 @@ header {
     padding-left: 10px; /* メニュー欄との間隔を調整 */
 }
 
-@media (max-width: 768px) {
+.container {
+  display: flex;
+  flex-direction: column;
+}
 
 .menu {
   position: fixed;
