@@ -1,6 +1,17 @@
 .italic {
   font-style: italic;
 }
+@media (max-width: 768px) {
+  /* スマートフォン向けのスタイルを指定 */
+  .element {
+    font-size: 14px; /* スマートフォン用の文字サイズを指定 */
+  }
+}
+
+.parent-element {
+  display: flex;
+  justify-content: flex-start;
+}
 
 body {
     background-color: #51868C;
