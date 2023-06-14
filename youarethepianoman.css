@@ -5,16 +5,17 @@
 body {
     background-color: #51868C;
     font-family: "Cochin", serif;
-    padding-left: 142px; /* メニュー欄との間隔を調整 */
+    padding-left: 120px; /* メニュー欄との間隔を調整 */
 
 }
 
 header {
     background-image: url("piano-image.jpg");
-    background-size: 40% auto; /* 幅を100%に調整 */
+    background-size: 50% auto; /* 幅を100%に調整 */
     background-repeat: no-repeat;
     background-position: right;
-    padding: 1px;
+    padding: 5px;
+    padding-left: 0px;
     color:#ffffff;
     font-size: 20px;
     margin:0;
