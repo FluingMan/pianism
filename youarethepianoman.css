@@ -5,7 +5,7 @@
 body {
     background-color: #51868C;
     font-family: "Cochin", serif;
-    padding-left: 144px; /* メニュー欄との間隔を調整 */
+    padding-left: 142px; /* メニュー欄との間隔を調整 */
 
 }
 
@@ -33,7 +33,7 @@ header {
   color:#ffffff;
   border-right: 1px solid #ccc; /* メニュー欄とボディの欄を分ける線を追加 */
   height: 100%; /* メニュー欄の高さを100%に設定 */
-  width: 143px; /* メニュー欄の幅を調整 */
+  width: 115px; /* メニュー欄の幅を調整 */
   margin-left: 0px; /* メニュー欄の左側の余白を設定 */
 
 }
