@@ -7,7 +7,7 @@ body {
   font-family: "Cochin", serif;
   padding-left:0 ; /* メニュー欄との間隔を調整 */
   margin: 0; /* bodyの余白を削除 */
-  margin-left: 88px; 
+  margin-left: 80px; 
 
 }
 
@@ -19,7 +19,7 @@ header {
   text-align: left;
   padding-left: 0px; /* メニュー欄との間隔を調整 */
   padding-top: 2px;
-  margin-left: 10px; 
+  margin-left: 8px; 
 }
 
 .menu {
