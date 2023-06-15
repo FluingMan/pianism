@@ -34,7 +34,6 @@ header {
   height: 100%;
   width: 115px;
   margin-left: 0px;
-  overflow-y: scroll;
   background-image: url("pianoicon.jpg");
   background-size: contain;
   background-repeat: no-repeat;
