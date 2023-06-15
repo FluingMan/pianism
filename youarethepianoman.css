@@ -3,29 +3,29 @@
 }
 
 body {
-    background-color: #51868C;
-    font-family: "Cochin", serif;
-    padding-left:0 ; /* メニュー欄との間隔を調整 */
-    margin: 0; /* bodyの余白を削除 */
-    margin-left: 150px; /* メニュー欄の幅と同じ値を指定 */
+  background-color: #51868C;
+  font-family: "Cochin", serif;
+  padding-left:0 ; /* メニュー欄との間隔を調整 */
+  margin: 0; /* bodyの余白を削除 */
+  margin-left: 150px; /* メニュー欄の幅と同じ値を指定 */
 
 }
 
 header {
-    background-image: url("piano-image.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-    padding: 5px;
-    color:#ffffff;
-    font-size: 20px;
-    margin:0;
-    text-align: left;
-    padding-left: 0px; /* メニュー欄との間隔を調整 */
-    padding-top: 2px;
+  padding: 5px;
+  color:#ffffff;
+  font-size: 20px;
+  margin:0;
+  text-align: left;
+  padding-left: 0px; /* メニュー欄との間隔を調整 */
+  padding-top: 2px;
 }
 
 .menu {
+  background-image: url("piano-image.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -72,42 +72,42 @@ a {
 
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
-    display: inline;
+  display: inline;
 }
 
 nav ul li a {
-    margin-right: 10px;
-    text-decoration: none;
+  margin-right: 10px;
+  text-decoration: none;
 }
 
 section {
-    color: #FFFFFF;
-    padding: 20px;
+  color: #FFFFFF;
+  padding: 20px;
 
 }
 
 #greeting {
-    background-color: #51868C;
-    background-size: cover;
+  background-color: #51868C;
+  background-size: cover;
 }
 
 #lessons {
-    background-color: #51868C;
+  background-color: #51868C;
 }
 
 #contact {
-    background-color: #51868C;
+  background-color: #51868C;
 }
 #top h2,
 #lesson h2,
 #contact h2 {
-    font-family: "Times New Roman", serif;
+  font-family: "Times New Roman", serif;
 }
 
 #top p,
@@ -115,5 +115,5 @@ section {
 #score p,
 #lesson p,
 #contact p {
-    font-family: "Times New Roman", serif;
+  font-family: "Times New Roman", serif;
 }
