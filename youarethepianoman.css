@@ -7,7 +7,7 @@ body {
   font-family: "Cochin", serif;
   padding-left:0 ; /* メニュー欄との間隔を調整 */
   margin: 0; /* bodyの余白を削除 */
-  margin-left: 90px; 
+  margin-left: 118px; 
 
 }
 
@@ -46,7 +46,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 80%;
   height: 100%;
   background-image: url("piano-imagesukes.jpg");
   background-size: contain;
