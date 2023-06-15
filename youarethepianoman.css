@@ -5,17 +5,18 @@
 body {
     background-color: #51868C;
     font-family: "Cochin", serif;
-    padding-left: 120px; /* メニュー欄との間隔を調整 */
+    padding-left:0 ; /* メニュー欄との間隔を調整 */
+    margin: 0; /* bodyの余白を削除 */
+    margin-left: 150px; /* メニュー欄の幅と同じ値を指定 */
 
 }
 
 header {
     background-image: url("piano-image.jpg");
-    background-size: 50% auto; /* 幅を100%に調整 */
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
     padding: 5px;
-    padding-left: 0px;
     color:#ffffff;
     font-size: 20px;
     margin:0;
@@ -36,7 +37,7 @@ header {
   height: 100%; /* メニュー欄の高さを100%に設定 */
   width: 115px; /* メニュー欄の幅を調整 */
   margin-left: 0px; /* メニュー欄の左側の余白を設定 */
-
+  overflow-y: scroll; /* 縦スクロールバーを表示 */
 }
 
 
@@ -62,11 +63,11 @@ a {
 
 .menu li a {
   text-decoration: none;
-  color: #333;
+  color: #fff;
 }
 
 .menu li a:hover {
-  color: #555;
+  color: #aaa;
 }
 
 
