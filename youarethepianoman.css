@@ -7,7 +7,7 @@ body {
   font-family: "Cochin", serif;
   padding-left:0 ; /* メニュー欄との間隔を調整 */
   margin: 0; /* bodyの余白を削除 */
-  margin-left: 100px; 
+  margin-left: 88px; 
 
 }
 
@@ -26,7 +26,6 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100px;
   background-color: #51868C;
   padding: 5px;
   color: #ffffff;
