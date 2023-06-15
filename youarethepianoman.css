@@ -7,7 +7,7 @@ body {
   font-family: "Cochin", serif;
   padding-left:0 ; /* メニュー欄との間隔を調整 */
   margin: 0; /* bodyの余白を削除 */
-  margin-left: 150px; /* メニュー欄の幅と同じ値を指定 */
+  margin-left: 120px; 
 
 }
 
@@ -19,27 +19,43 @@ header {
   text-align: left;
   padding-left: 0px; /* メニュー欄との間隔を調整 */
   padding-top: 2px;
+  margin-left: 10px; 
 }
 
 .menu {
-  background-image: url("piano-image.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 200px;
   background-color: #51868C;
   padding: 5px;
-  color:#ffffff;
-  border-right: 1px solid #ccc; /* メニュー欄とボディの欄を分ける線を追加 */
-  height: 100%; /* メニュー欄の高さを100%に設定 */
-  width: 115px; /* メニュー欄の幅を調整 */
-  margin-left: 0px; /* メニュー欄の左側の余白を設定 */
-  overflow-y: scroll; /* 縦スクロールバーを表示 */
+  color: #ffffff;
+  border-right: 1px solid #ccc;
+  height: 100%;
+  width: 115px;
+  margin-left: 0px;
+  overflow-y: scroll;
+  background-image: url("pianoicon.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0px 333px;
+
 }
 
+.menu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("piano-imagesukes.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1; /* 画像を背面に配置 */
+
+}
 
 .button-container {
   border-radius: 10px;
