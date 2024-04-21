@@ -180,4 +180,19 @@ tbody td {
 tbody td:hover {
     background-color: #f9f9f9;
 }
+/* メディアクエリを使用してスマートフォン用のスタイルを追加 */
+@media only screen and (max-width: 600px) {
+    .calendar td {
+        width: 50px; /* スマートフォン用にセルの幅を縮小 */
+        height: 50px; /* スマートフォン用にセルの高さを縮小 */
+    }
 
+    .calendar .date {
+        font-size: 10px; /* スマートフォン用に日付のフォントサイズを縮小 */
+    }
+
+    .calendar .event {
+        font-size: 15px; /* スマートフォン用に予定のフォントサイズを縮小 */
+        text-align: center; /* 予定の文字を中央に配置 */
+    }
+}
