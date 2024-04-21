@@ -63,10 +63,10 @@
             var daysOfWeek = ['日', '月', '火', '水', '木', '金', '土'];
             var calendarBody = document.getElementById('calendar-body');
             var calendarCaption = document.getElementById('calendar-caption');
-            
+
             // カレンダーの見出しを設定
             calendarCaption.textContent = year + '年' + (month + 1) + '月';
-            
+
             // カレンダーの日付を生成
             var date = 1;
             for (var i = 0; i < 6; i++) {
@@ -96,6 +96,7 @@
         var year = date.getFullYear();
         var month = date.getMonth();
         generateCalendar(year, month);
+        generateCalendar(year, month + 1); // 次の月のカレンダーを生成
     </script>
 </body>
 
