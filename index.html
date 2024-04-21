@@ -20,14 +20,19 @@
             position: absolute;
             top: 5px; /* セルの上部に余白 */
             left: 5px; /* セルの左部に余白 */
-            font-size: 12px; /* 日付のフォントサイズ */
+            font-size: 10px; /* 日付のフォントサイズを少し小さく */
         }
 
         .calendar .event {
             font-size: 14px; /* 予定のフォントサイズ */
             position: absolute;
-            bottom: 5px; /* セルの下部に余白 */
-            left: 5px; /* セルの左部に余白 */
+            bottom: 50%; /* セルの下部に配置 */
+            left: 50%; /* セルの左部に配置 */
+            transform: translate(-50%, 50%); /* 中央に配置 */
+        }
+
+        #calendar-caption {
+            color: white; /* キャプションの文字色を白に設定 */
         }
     </style>
 </head>
@@ -151,7 +156,6 @@
         caption.textContent = year + '年' + (month + 1) + '月～' + nextYear + '年' + (nextMonth + 1) + '月';
 
         generateCalendar(year, month);
-        generateCalendar(nextYear, nextMonth); // 次の月のカレンダーを生成
     </script>
 </body>
 
