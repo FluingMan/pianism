@@ -13,6 +13,7 @@
             height: 80px; /* セルの高さ */
             text-align: center;
             vertical-align: middle;
+            border: 1px solid #ccc; /* セルの境界線 */
         }
 
         .calendar .date {
@@ -24,6 +25,9 @@
 
         .calendar .event {
             font-size: 14px; /* 予定のフォントサイズ */
+            position: absolute;
+            bottom: 5px; /* セルの下部に余白 */
+            left: 5px; /* セルの左部に余白 */
         }
     </style>
 </head>
