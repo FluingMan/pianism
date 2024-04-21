@@ -6,6 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="youarethepianoman.css">
     <title>起きてーーーー朝だよーーーー</title>
+    <style>
+        .calendar td {
+            position: relative;
+            width: 80px; /* セルの幅 */
+            height: 80px; /* セルの高さ */
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .calendar .date {
+            position: absolute;
+            top: 5px; /* セルの上部に余白 */
+            left: 5px; /* セルの左部に余白 */
+            font-size: 12px; /* 日付のフォントサイズ */
+        }
+
+        .calendar .event {
+            font-size: 14px; /* 予定のフォントサイズ */
+        }
+    </style>
 </head>
 
 <body>
@@ -75,7 +95,13 @@
                         break;
                     } else {
                         var cell = document.createElement('td');
-                        cell.textContent = date;
+                        var dateSpan = document.createElement('span');
+                        dateSpan.classList.add('date');
+                        dateSpan.textContent = date;
+                        var eventSpan = document.createElement('span');
+                        eventSpan.classList.add('event');
+                        cell.appendChild(dateSpan);
+                        cell.appendChild(eventSpan);
                         row.appendChild(cell);
                         date++;
                     }
@@ -101,10 +127,11 @@
         }
         var caption = document.getElementById('calendar-caption');
         caption.textContent = year + '年' + (month + 1) + '月～' + nextYear + '年' + (nextMonth + 1) + '月';
-        
+
         generateCalendar(year, month);
         generateCalendar(nextYear, nextMonth); // 次の月のカレンダーを生成
     </script>
 </body>
 
 </html>
+
