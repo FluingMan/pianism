@@ -180,19 +180,13 @@ tbody td {
 tbody td:hover {
     background-color: #f9f9f9;
 }
-/* メディアクエリを使用してスマートフォン用のスタイルを追加 */
+/* スマートフォン用のスタイルを追加 */
 @media only screen and (max-width: 600px) {
-    .calendar td {
-        width: 50px; /* スマートフォン用にセルの幅を縮小 */
-        height: 50px; /* スマートフォン用にセルの高さを縮小 */
-    }
-
-    .calendar .date {
-        font-size: 10px; /* スマートフォン用に日付のフォントサイズを縮小 */
-    }
-
     .calendar .event {
-        font-size: 15px; /* スマートフォン用に予定のフォントサイズを縮小 */
-        text-align: center; /* 予定の文字を中央に配置 */
+        display: block; /* 予定内容をブロック要素として表示 */
+        position: static; /* 位置を静的に設定して、通常のフローレイアウトに戻す */
+        width: auto; /* 横幅を自動調整 */
+        text-align: center; /* テキストを中央揃え */
+        margin-top: 5px; /* 上部マージンを追加 */
     }
 }
