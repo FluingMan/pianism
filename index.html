@@ -100,6 +100,9 @@
                         dateSpan.textContent = date;
                         var eventSpan = document.createElement('span');
                         eventSpan.classList.add('event');
+                        var dateKey = year + '-' + (month + 1) + '-' + date;
+                        var event = getEventForDate(dateKey); // 日付に対する予定を取得
+                        eventSpan.textContent = event;
                         cell.appendChild(dateSpan);
                         cell.appendChild(eventSpan);
                         row.appendChild(cell);
@@ -111,6 +114,21 @@
                     break;
                 }
             }
+        }
+
+        // 各日付の予定を取得する関数
+        function getEventForDate(dateKey) {
+            var events = {
+                'Monday': '6:45～',
+                'Tuesday': '6:45～',
+                'Wednesday': '休み',
+                'Thursday': '6:45～',
+                'Friday': '6:45～',
+                'Saturday': '休み',
+                'Sunday': '休み'
+            };
+            var dayOfWeek = new Date(dateKey).toLocaleDateString('en', { weekday: 'long' });
+            return events[dayOfWeek];
         }
 
         // 現在の年月を取得してカレンダーを生成
@@ -134,4 +152,3 @@
 </body>
 
 </html>
-
