@@ -19,27 +19,19 @@
         .calendar td {
             position: relative;
             width: calc(100% / 7); /* セルの幅を均等に設定 */
-            height: 60px; /* セルの高さを少し小さく */
             text-align: center;
             vertical-align: middle;
             border: 1px solid #ccc; /* セルの境界線 */
             font-size: 12px; /* 日付のフォントサイズを少し小さく */
+            padding: 5px; /* セルの余白を追加 */
         }
 
-        .calendar .date {
-            position: absolute;
-            top: 5px; /* セルの上部に余白 */
-            left: 5px; /* セルの左部に余白 */
+        .date {
             font-size: 10px; /* 日付のフォントサイズをさらに小さく */
         }
 
-        .calendar .event {
+        .event {
             font-size: 15px; /* 予定のフォントサイズを少し小さく */
-            position: absolute;
-            top: 30px; /* セルの下部に配置 */
-            left: 50%; /* セルの中央に配置 */
-            transform: translateX(-50%); /* 水平方向に中央揃え */
-            white-space: nowrap; /* テキストの折り返しを防止 */
         }
 
         #calendar-caption {
@@ -115,10 +107,10 @@
                         break;
                     } else {
                         var cell = document.createElement('td');
-                        var dateSpan = document.createElement('span');
+                        var dateSpan = document.createElement('div');
                         dateSpan.classList.add('date');
                         dateSpan.textContent = date;
-                        var eventSpan = document.createElement('span');
+                        var eventSpan = document.createElement('div');
                         eventSpan.classList.add('event');
                         var dateKey = year + '-' + (month + 1) + '-' + date;
                         var event = getEventForDate(dateKey); // 日付に対する予定を取得
