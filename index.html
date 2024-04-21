@@ -27,11 +27,18 @@
         }
 
         .date {
-            font-size: 7px; /* 日付のフォントサイズをさらに小さく */
+            font-size: 10px; /* 日付のフォントサイズをさらに小さく */
+            position: absolute;
+            top: 5px; /* セルの上部に余白 */
+            left: 5px; /* セルの左部に余白 */
         }
 
         .event {
             font-size: 15px; /* 予定のフォントサイズを少し小さく */
+            position: absolute;
+            bottom: 5px; /* セルの下部に配置 */
+            left: 50%; /* セルの中央に配置 */
+            transform: translateX(-50%); /* 水平方向に中央揃え */
         }
 
         #calendar-caption {
