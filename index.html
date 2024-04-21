@@ -37,7 +37,7 @@
 
     <div class="calendar">
         <table>
-            <caption>2024年4月 - 2024年5月</caption>
+            <caption id="calendar-caption"></caption>
             <thead>
                 <tr>
                     <th>日</th>
@@ -49,51 +49,54 @@
                     <th>土</th>
                 </tr>
             </thead>
-            <tbody>
-                <!-- カレンダーの日付を表示 -->
-                <script>
-                    // 現在の年月を取得
-                    var date = new Date();
-                    var year = date.getFullYear();
-                    var month = date.getMonth();
-
-                    // 2か月分のカレンダーを生成
-                    for (var i = 0; i < 2; i++) {
-                        var currentDate = new Date(year, month + i, 1);
-                        var lastDay = new Date(year, month + i + 1, 0).getDate();
-                        var firstDayOfWeek = currentDate.getDay();
-
-                        // 曜日を表示
-                        var daysOfWeek = ['日', '月', '火', '水', '木', '金', '土'];
-                        document.write('<tr>');
-                        for (var j = 0; j < 7; j++) {
-                            document.write('<td>' + daysOfWeek[j] + '</td>');
-                        }
-                        document.write('</tr>');
-
-                        // 日付と予定を表示
-                        for (var day = 1; day <= lastDay; day++) {
-                            document.write('<tr>');
-                            for (var j = 0; j < firstDayOfWeek; j++) {
-                                document.write('<td></td>');
-                            }
-                            document.write('<td>' + day + '</td>');
-
-                            // 予定を書き込むためのセルを追加
-                            document.write('<td></td>');
-                            if ((firstDayOfWeek + day) % 7 === 0) { // 日曜日まで表示したら新しい行を開始
-                                document.write('</tr><tr>');
-                            }
-                        }
-                        document.write('</tr>');
-                    }
-                </script>
-                <!-- ここにPHPやJavaScriptを使用して日付の表示を生成する処理を追加することもできます -->
-            </tbody>
+            <tbody id="calendar-body"></tbody>
         </table>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // カレンダーの生成
+        function generateCalendar(year, month) {
+            var firstDay = new Date(year, month, 1);
+            var lastDay = new Date(year, month + 1, 0);
+            var daysInMonth = lastDay.getDate();
+            var firstDayOfWeek = firstDay.getDay();
+            var daysOfWeek = ['日', '月', '火', '水', '木', '金', '土'];
+            var calendarBody = document.getElementById('calendar-body');
+            var calendarCaption = document.getElementById('calendar-caption');
+            
+            // カレンダーの見出しを設定
+            calendarCaption.textContent = year + '年' + (month + 1) + '月';
+            
+            // カレンダーの日付を生成
+            var date = 1;
+            for (var i = 0; i < 6; i++) {
+                var row = document.createElement('tr');
+                for (var j = 0; j < 7; j++) {
+                    if (i === 0 && j < firstDayOfWeek) {
+                        var cell = document.createElement('td');
+                        row.appendChild(cell);
+                    } else if (date > daysInMonth) {
+                        break;
+                    } else {
+                        var cell = document.createElement('td');
+                        cell.textContent = date;
+                        row.appendChild(cell);
+                        date++;
+                    }
+                }
+                calendarBody.appendChild(row);
+                if (date > daysInMonth) {
+                    break;
+                }
+            }
+        }
+
+        // 現在の年月を取得してカレンダーを生成
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth();
+        generateCalendar(year, month);
+    </script>
 </body>
 
 </html>
