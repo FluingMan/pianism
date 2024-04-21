@@ -19,25 +19,27 @@
         .calendar td {
             position: relative;
             width: calc(100% / 7); /* セルの幅を均等に設定 */
-            height: 80px; /* セルの高さ */
+            height: 60px; /* セルの高さを少し小さく */
             text-align: center;
             vertical-align: middle;
             border: 1px solid #ccc; /* セルの境界線 */
+            font-size: 12px; /* 日付のフォントサイズを少し小さく */
         }
 
         .calendar .date {
             position: absolute;
             top: 5px; /* セルの上部に余白 */
             left: 5px; /* セルの左部に余白 */
-            font-size: 10px; /* 日付のフォントサイズを少し小さく */
+            font-size: 10px; /* 日付のフォントサイズをさらに小さく */
         }
 
         .calendar .event {
-            font-size: 14px; /* 予定のフォントサイズ */
+            font-size: 10px; /* 予定のフォントサイズを少し小さく */
             position: absolute;
-            bottom: 50%; /* セルの下部に配置 */
-            left: 50%; /* セルの左部に配置 */
-            transform: translate(-50%, 50%); /* 中央に配置 */
+            bottom: 5px; /* セルの下部に配置 */
+            left: 50%; /* セルの中央に配置 */
+            transform: translateX(-50%); /* 水平方向に中央揃え */
+            white-space: nowrap; /* テキストの折り返しを防止 */
         }
 
         #calendar-caption {
@@ -137,13 +139,13 @@
         // 各日付の予定を取得する関数
         function getEventForDate(dateKey) {
             var events = {
-                'Monday': '有',
-                'Tuesday': '有',
-                'Wednesday': '休',
-                'Thursday': '有',
-                'Friday': '有',
-                'Saturday': '休',
-                'Sunday': '休'
+                'Monday': '6:45～',
+                'Tuesday': '6:45～',
+                'Wednesday': '休み',
+                'Thursday': '6:45～',
+                'Friday': '6:45～',
+                'Saturday': '休み',
+                'Sunday': '休み'
             };
             var dayOfWeek = new Date(dateKey).toLocaleDateString('en', { weekday: 'long' });
             return events[dayOfWeek];
