@@ -7,13 +7,23 @@
     <link rel="stylesheet" href="youarethepianoman.css">
     <title>起きてーーーー朝だよーーーー</title>
     <style>
+        .calendar {
+            overflow-x: auto; /* 横スクロールを有効にする */
+        }
+
+        .calendar table {
+            width: 100%; /* テーブルを幅いっぱいに広げる */
+            table-layout: fixed; /* テーブルの幅を固定する */
+        }
+
         .calendar td {
             position: relative;
-            width: 80px; /* セルの幅 */
+            width: calc(100% / 7); /* セルの幅を均等に設定 */
             height: 80px; /* セルの高さ */
             text-align: center;
             vertical-align: middle;
             border: 1px solid #ccc; /* セルの境界線 */
+            font-size: 14px; /* 日付のフォントサイズ */
         }
 
         .calendar .date {
@@ -24,11 +34,11 @@
         }
 
         .calendar .event {
-            font-size: 14px; /* 予定のフォントサイズ */
+            font-size: 12px; /* 予定のフォントサイズ */
             position: absolute;
-            bottom: 50%; /* セルの下部に配置 */
-            left: 50%; /* セルの左部に配置 */
-            transform: translate(-50%, 50%); /* 中央に配置 */
+            bottom: 5px; /* セルの下部に配置 */
+            left: 0; /* セルの左端に配置 */
+            width: 100%; /* 幅いっぱいに広げる */
         }
 
         #calendar-caption {
