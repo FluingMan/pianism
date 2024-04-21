@@ -62,10 +62,6 @@
             var firstDayOfWeek = firstDay.getDay();
             var daysOfWeek = ['日', '月', '火', '水', '木', '金', '土'];
             var calendarBody = document.getElementById('calendar-body');
-            var calendarCaption = document.getElementById('calendar-caption');
-
-            // カレンダーの見出しを設定
-            calendarCaption.textContent = year + '年' + (month + 1) + '月';
 
             // カレンダーの日付を生成
             var date = 1;
@@ -92,11 +88,22 @@
         }
 
         // 現在の年月を取得してカレンダーを生成
-        var date = new Date();
-        var year = date.getFullYear();
-        var month = date.getMonth();
+        var today = new Date();
+        var year = today.getFullYear();
+        var month = today.getMonth();
+
+        // キャプションの表示
+        var nextMonth = month + 1;
+        var nextYear = year;
+        if (nextMonth === 12) {
+            nextMonth = 0;
+            nextYear++;
+        }
+        var caption = document.getElementById('calendar-caption');
+        caption.textContent = year + '年' + (month + 1) + '月～' + nextYear + '年' + (nextMonth + 1) + '月';
+        
         generateCalendar(year, month);
-        generateCalendar(year, month + 1); // 次の月のカレンダーを生成
+        generateCalendar(nextYear, nextMonth); // 次の月のカレンダーを生成
     </script>
 </body>
 
