@@ -23,7 +23,6 @@
             text-align: center;
             vertical-align: middle;
             border: 1px solid #ccc; /* セルの境界線 */
-            font-size: 14px; /* 日付のフォントサイズ */
         }
 
         .calendar .date {
@@ -34,11 +33,11 @@
         }
 
         .calendar .event {
-            font-size: 12px; /* 予定のフォントサイズ */
+            font-size: 14px; /* 予定のフォントサイズ */
             position: absolute;
-            bottom: 5px; /* セルの下部に配置 */
-            left: 0; /* セルの左端に配置 */
-            width: 100%; /* 幅いっぱいに広げる */
+            bottom: 50%; /* セルの下部に配置 */
+            left: 50%; /* セルの左部に配置 */
+            transform: translate(-50%, 50%); /* 中央に配置 */
         }
 
         #calendar-caption {
@@ -138,13 +137,13 @@
         // 各日付の予定を取得する関数
         function getEventForDate(dateKey) {
             var events = {
-                'Monday': '6:45～',
-                'Tuesday': '6:45～',
-                'Wednesday': '休み',
-                'Thursday': '6:45～',
-                'Friday': '6:45～',
-                'Saturday': '休み',
-                'Sunday': '休み'
+                'Monday': '有',
+                'Tuesday': '有',
+                'Wednesday': '休',
+                'Thursday': '有',
+                'Friday': '有',
+                'Saturday': '休',
+                'Sunday': '休'
             };
             var dayOfWeek = new Date(dateKey).toLocaleDateString('en', { weekday: 'long' });
             return events[dayOfWeek];
