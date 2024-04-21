@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,32 +8,31 @@
     <title>起きてーーーー朝だよーーーー</title>
 </head>
 
-<div class="menu">
-  <ul>
-    <li><a href="index.html">TOP</a></li>
-    <li><a href="spoon.html">LIVE</a></li>
-    <li><a href="video.html">VIDEO</a></li>
-    <li><a href="score.html">SCORE</a></li>
-    <li><a href="lesson.html">LESSON</a></li>
-    <li><a href="contact.html">CONTACT</a></li>
-  </ul>
-</div>
-
-
 <body>
-   <header>
-     <h1><span class="italic">Mini</span> Piano Contents<h1>
-   </header>
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">TOP</a></li>
+            <li><a href="spoon.html">LIVE</a></li>
+            <li><a href="video.html">VIDEO</a></li>
+            <li><a href="score.html">SCORE</a></li>
+            <li><a href="lesson.html">LESSON</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <header>
+        <h1><span class="italic">Mini</span> Piano Contents</h1>
+    </header>
 
     <section id="top">
         <h2>ごあいさつ</h2>
         <p>Miniのホームページにお越しいただきありがとうございます。</p>
-        <p>このシンプルすぎるデザインが良いですよね?</p>
+        <p>このシンプルすぎるデザインが良いですよね？</p>
         <p>阿部寛さんのHPよりも早いHPを目指します。</p>
         <p>このHPではMiniの活動に関する情報をリアルタイムで発信していきます。</p>
-        <p><プロフィール></p>
-        <p>Mini。20代半ば。東京在住。オンラインで演奏・作曲活動中。ライブメイン<p>
-        <p>何型か分からない。右利き。車のMINIが好き。<p>
+        <p>プロフィール</p>
+        <p>Mini。20代半ば。東京在住。オンラインで演奏・作曲活動中。ライブメイン</p>
+        <p>何型か分からない。右利き。車のMINIが好き。</p>
     </section>
 
     <div class="calendar">
@@ -51,53 +49,49 @@
                     <th>土</th>
                 </tr>
             </thead>
-                <tbody>
-                  <!-- カレンダーの日付を表示 -->
-                  <script>
+            <tbody>
+                <!-- カレンダーの日付を表示 -->
+                <script>
                     // 現在の年月を取得
                     var date = new Date();
                     var year = date.getFullYear();
                     var month = date.getMonth();
-                
+
                     // 2か月分のカレンダーを生成
                     for (var i = 0; i < 2; i++) {
-                      var currentDate = new Date(year, month + i, 1);
-                      var lastDay = new Date(year, month + i + 1, 0).getDate();
-                      var firstDayOfWeek = currentDate.getDay();
-                
-                      document.write('<tr>');
-                      // 曜日を表示
-                      var daysOfWeek = ['日', '月', '火', '水', '木', '金', '土'];
-                      for (var j = 0; j < 7; j++) {
-                        document.write('<td>' + daysOfWeek[j] + '</td>');
-                      }
-                      document.write('</tr>');
-                
-                      // 日付と予定を表示
-                      for (var day = 1; day <= lastDay; day++) {
-                        // 日付を表示
+                        var currentDate = new Date(year, month + i, 1);
+                        var lastDay = new Date(year, month + i + 1, 0).getDate();
+                        var firstDayOfWeek = currentDate.getDay();
+
+                        // 曜日を表示
+                        var daysOfWeek = ['日', '月', '火', '水', '木', '金', '土'];
                         document.write('<tr>');
-                        for (var j = 0; j < firstDayOfWeek; j++) {
-                          document.write('<td></td>');
+                        for (var j = 0; j < 7; j++) {
+                            document.write('<td>' + daysOfWeek[j] + '</td>');
                         }
-                        document.write('<td>' + day + '</td>');
-                
-                        // 予定を書き込むためのセルを追加
-                        document.write('<td></td>');
-                        if ((firstDayOfWeek + day) % 7 === 0) { // 日曜日まで表示したら新しい行を開始
-                          document.write('</tr><tr>');
+                        document.write('</tr>');
+
+                        // 日付と予定を表示
+                        for (var day = 1; day <= lastDay; day++) {
+                            document.write('<tr>');
+                            for (var j = 0; j < firstDayOfWeek; j++) {
+                                document.write('<td></td>');
+                            }
+                            document.write('<td>' + day + '</td>');
+
+                            // 予定を書き込むためのセルを追加
+                            document.write('<td></td>');
+                            if ((firstDayOfWeek + day) % 7 === 0) { // 日曜日まで表示したら新しい行を開始
+                                document.write('</tr><tr>');
+                            }
                         }
-                      }
-                      document.write('</tr>');
+                        document.write('</tr>');
                     }
-                  </script>
-                  <!-- ここにPHPやJavaScriptを使用して日付の表示を生成する処理を追加することもできます -->
-                </tbody>
+                </script>
+                <!-- ここにPHPやJavaScriptを使用して日付の表示を生成する処理を追加することもできます -->
+            </tbody>
         </table>
     </div>
-
-
-
 
     <script src="script.js"></script>
 </body>
